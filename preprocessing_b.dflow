@@ -1,0 +1,871 @@
+{
+    "baseDirectory": ".",
+    "connections": [
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{6baab1b3-fac6-4c68-9ee9-e50971f9100e}",
+            "outPortIdx": 0,
+            "outPortUuid": "{fdd6cc27-fdc6-46c3-8c98-cdff409a9d60}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{fdd6cc27-fdc6-46c3-8c98-cdff409a9d60}",
+            "outPortIdx": 0,
+            "outPortUuid": "{58bb917a-fa23-465e-a8e0-a4fff887c640}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{19dac06e-9295-46cb-995b-7a6437141fcc}",
+            "outPortIdx": 0,
+            "outPortUuid": "{48241a0f-62dd-4b3a-8e42-974db2c6fea9}"
+        },
+        {
+            "inPortIdx": 1,
+            "inPortUuid": "{48241a0f-62dd-4b3a-8e42-974db2c6fea9}",
+            "outPortIdx": 0,
+            "outPortUuid": "{01634174-9ae4-418e-96b3-071de1cfe8cb}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{01634174-9ae4-418e-96b3-071de1cfe8cb}",
+            "outPortIdx": 0,
+            "outPortUuid": "{57e33d9b-48f3-4c13-87f0-1d214d13b39c}"
+        },
+        {
+            "inPortIdx": 1,
+            "inPortUuid": "{57e33d9b-48f3-4c13-87f0-1d214d13b39c}",
+            "outPortIdx": 0,
+            "outPortUuid": "{143d3b0d-30f5-4082-ad5f-f6bfe3cd1037}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{57e33d9b-48f3-4c13-87f0-1d214d13b39c}",
+            "outPortIdx": 0,
+            "outPortUuid": "{fdf180af-3e3e-4a23-b39d-bf8e3a5cf43d}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{143d3b0d-30f5-4082-ad5f-f6bfe3cd1037}",
+            "outPortIdx": 0,
+            "outPortUuid": "{a0ea1c96-6487-40d0-b429-a0f45aa248f0}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{58bb917a-fa23-465e-a8e0-a4fff887c640}",
+            "outPortIdx": 0,
+            "outPortUuid": "{19dac06e-9295-46cb-995b-7a6437141fcc}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{ddd2968f-f0fe-4548-9f8e-7ff7a6b968cb}",
+            "outPortIdx": 0,
+            "outPortUuid": "{f125d986-463e-4c0e-a13d-de3f1f047eb7}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{58fddf39-3b6f-417e-ac1a-4f88cc5582bb}",
+            "outPortIdx": 0,
+            "outPortUuid": "{73267967-7c19-4a41-b74b-a4a5e8025e1b}"
+        },
+        {
+            "inPortIdx": 1,
+            "inPortUuid": "{ddd2968f-f0fe-4548-9f8e-7ff7a6b968cb}",
+            "outPortIdx": 0,
+            "outPortUuid": "{58fddf39-3b6f-417e-ac1a-4f88cc5582bb}"
+        },
+        {
+            "inPortIdx": 0,
+            "inPortUuid": "{48241a0f-62dd-4b3a-8e42-974db2c6fea9}",
+            "outPortIdx": 0,
+            "outPortUuid": "{ddd2968f-f0fe-4548-9f8e-7ff7a6b968cb}"
+        }
+    ],
+    "nodes": [
+        {
+            "classIdentifier": "Scale",
+            "enabled": true,
+            "name": "Mise à l'échelle",
+            "outputsEnabled": [
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "Box",
+                    "name": "algorithm",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Specified",
+                    "name": "resizeTo",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 4,
+                    "min": 0.25,
+                    "name": "scale",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 0.5
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{fdd6cc27-fdc6-46c3-8c98-cdff409a9d60}",
+            "x": 1691,
+            "y": -479
+        },
+        {
+            "classIdentifier": "Save",
+            "enabled": true,
+            "name": "Enregistrement",
+            "outputsEnabled": [
+            ],
+            "parameters": [
+                {
+                    "name": "directory",
+                    "target": ".",
+                    "type": "directory"
+                },
+                {
+                    "currentValue": "FITS",
+                    "name": "fileType",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "No",
+                    "name": "backup",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+                "{58bb917a-fa23-465e-a8e0-a4fff887c640}": {
+                    "Name": "master_b"
+                }
+            },
+            "uuid": "{6baab1b3-fac6-4c68-9ee9-e50971f9100e}",
+            "x": 1950.3999999999999,
+            "y": -516.9999999999999
+        },
+        {
+            "classIdentifier": "Flat-Field Correction",
+            "enabled": true,
+            "name": "Correction “Flat”",
+            "outputsEnabled": [
+                true,
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "No",
+                    "name": "outputHDR",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{48241a0f-62dd-4b3a-8e42-974db2c6fea9}",
+            "x": 594,
+            "y": -349
+        },
+        {
+            "classIdentifier": "Integration",
+            "enabled": true,
+            "name": "Intégration",
+            "outputsEnabled": [
+                true,
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "None",
+                    "name": "rejectionType",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 16,
+                    "min": 0.0625,
+                    "name": "upper",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 3
+                },
+                {
+                    "max": 16,
+                    "min": 0.0625,
+                    "name": "lower",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 3
+                },
+                {
+                    "currentValue": "None",
+                    "name": "normalizationType",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 16,
+                    "min": 1,
+                    "name": "normalizationValue",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "EV",
+                    "value": 1
+                },
+                {
+                    "max": 4,
+                    "min": 0.25,
+                    "name": "scale",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 1
+                },
+                {
+                    "currentValue": "Yes",
+                    "name": "outputHDR",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{01634174-9ae4-418e-96b3-071de1cfe8cb}",
+            "x": 413.89800796812744,
+            "y": -0.7784860557769377
+        },
+        {
+            "classIdentifier": "Blend",
+            "enabled": true,
+            "name": "Arithmétique",
+            "outputsEnabled": [
+                true,
+                true,
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "Subtract",
+                    "name": "mode1",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Multiply",
+                    "name": "mode2",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Yes",
+                    "name": "outputHDR",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{57e33d9b-48f3-4c13-87f0-1d214d13b39c}",
+            "x": 100.73625498007965,
+            "y": 20.603984063745003
+        },
+        {
+            "classIdentifier": "Integration",
+            "enabled": true,
+            "name": "Intégration",
+            "outputsEnabled": [
+                true,
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "None",
+                    "name": "rejectionType",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 16,
+                    "min": 0.0625,
+                    "name": "upper",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 3
+                },
+                {
+                    "max": 16,
+                    "min": 0.0625,
+                    "name": "lower",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 3
+                },
+                {
+                    "currentValue": "None",
+                    "name": "normalizationType",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 16,
+                    "min": 1,
+                    "name": "normalizationValue",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "EV",
+                    "value": 1
+                },
+                {
+                    "max": 4,
+                    "min": 0.25,
+                    "name": "scale",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 1
+                },
+                {
+                    "currentValue": "Yes",
+                    "name": "outputHDR",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{143d3b0d-30f5-4082-ad5f-f6bfe3cd1037}",
+            "x": -248.02868525896417,
+            "y": 250.92749003984056
+        },
+        {
+            "classIdentifier": "Raw photos",
+            "enabled": true,
+            "name": "Dark Flats",
+            "outputsEnabled": [
+                true
+            ],
+            "parameters": [
+                {
+                    "files": [
+                        "dflats/GGZ_3001.NEF",
+                        "dflats/GGZ_3002.NEF",
+                        "dflats/GGZ_3003.NEF",
+                        "dflats/GGZ_3004.NEF",
+                        "dflats/GGZ_3005.NEF"
+                    ],
+                    "name": "rawCollection",
+                    "type": "filesCollection"
+                },
+                {
+                    "currentValue": "Linear",
+                    "name": "colorSpace",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "None",
+                    "name": "debayer",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Daylight",
+                    "name": "whiteBalance",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Auto",
+                    "name": "clip",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{a0ea1c96-6487-40d0-b429-a0f45aa248f0}",
+            "x": -656.3816733067729,
+            "y": 234.67729083665338
+        },
+        {
+            "classIdentifier": "Raw photos",
+            "enabled": true,
+            "name": "Flats",
+            "outputsEnabled": [
+                true
+            ],
+            "parameters": [
+                {
+                    "files": [
+                        "flats/GGZ_2996.NEF",
+                        "flats/GGZ_2997.NEF",
+                        "flats/GGZ_2998.NEF",
+                        "flats/GGZ_2999.NEF",
+                        "flats/GGZ_3000.NEF"
+                    ],
+                    "name": "rawCollection",
+                    "type": "filesCollection"
+                },
+                {
+                    "currentValue": "Linear",
+                    "name": "colorSpace",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "None",
+                    "name": "debayer",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Daylight",
+                    "name": "whiteBalance",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Auto",
+                    "name": "clip",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{fdf180af-3e3e-4a23-b39d-bf8e3a5cf43d}",
+            "x": -663.984860557769,
+            "y": -13.778486055776938
+        },
+        {
+            "classIdentifier": "Integration",
+            "enabled": true,
+            "name": "Intégration",
+            "outputsEnabled": [
+                true,
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "None",
+                    "name": "rejectionType",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 16,
+                    "min": 0.0625,
+                    "name": "upper",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 3
+                },
+                {
+                    "max": 16,
+                    "min": 0.0625,
+                    "name": "lower",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 3
+                },
+                {
+                    "currentValue": "None",
+                    "name": "normalizationType",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 16,
+                    "min": 1,
+                    "name": "normalizationValue",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "EV",
+                    "value": 1
+                },
+                {
+                    "max": 4,
+                    "min": 0.25,
+                    "name": "scale",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 2
+                },
+                {
+                    "currentValue": "Yes",
+                    "name": "outputHDR",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2925.NEF": {
+                    "Points": "1213.36,1692.49;3294.86,426.524"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2927.NEF": {
+                    "Points": "1213.16,1692.29;3294.86,426.993"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2929.NEF": {
+                    "Points": "1214.17,1692.49;3296.42,428.243"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2930.NEF": {
+                    "Points": "1214.17,1691.88;3297.13,428.401"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2933.NEF": {
+                    "Points": "1214.17,1691.47;3298.06,428.956"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2934.NEF": {
+                    "Points": "1214.58,1691.07;3298.89,429.695"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2935.NEF": {
+                    "Points": "1214.78,1690.86;3298.89,429.88"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2940.NEF": {
+                    "Points": "1214.38,1689.85;3300.09,431.359"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2941.NEF": {
+                    "Points": "1214.17,1689.85;3300,431.359"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2942.NEF": {
+                    "Points": "1213.77,1689.24;3300.37,431.729"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2943.NEF": {
+                    "Points": "1213.16,1688.63;3299.72,431.544"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2944.NEF": {
+                    "Points": "1212.34,1688.43;3299.45,431.637"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2946.NEF": {
+                    "Points": "1210.72,1688.02;3298.52,432.006"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2947.NEF": {
+                    "Points": "1210.72,1687.82;3298.8,432.469"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2949.NEF": {
+                    "Points": "1212.55,1686.6;3301.29,431.452"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2950.NEF": {
+                    "Points": "1213.97,1686.19;3302.5,432.284"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2951.NEF": {
+                    "Points": "1214.17,1686.6;3302.87,433.393"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2952.NEF": {
+                    "Points": "1214.17,1686.8;3303.24,433.948"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2953.NEF": {
+                    "Points": "1214.38,1687.21;3303.51,434.687"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2955.NEF": {
+                    "Points": "1214.38,1686.81;3304.35,435.797"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2956.NEF": {
+                    "Points": "1214.17,1687.21;3304.53,436.444"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2959.NEF": {
+                    "Points": "1214.78,1687.21;3305.91,437.923"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2960.NEF": {
+                    "Points": "1214.58,1687.61;3305.91,438.293"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2961.NEF": {
+                    "Points": "1214.99,1688.02;3306.75,439.217"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2964.NEF": {
+                    "Points": "1214.58,1688.83;3307.67,441.529"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2965.NEF": {
+                    "Points": "1215.19,1688.63;3308.42,442.176"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2967.NEF": {
+                    "Points": "1215.39,1689.24;3308.88,443.655"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2968.NEF": {
+                    "Points": "1215.8,1689.44;3309.52,444.117"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2969.NEF": {
+                    "Points": "1215.8,1689.44;3309.8,444.58"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2970.NEF": {
+                    "Points": "1215.8,1690.05;3310.45,445.874"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2971.NEF": {
+                    "Points": "1216.2,1690.86;3310.73,446.89"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2974.NEF": {
+                    "Points": "1217.22,1694.32;3312.85,452.16"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2976.NEF": {
+                    "Points": "1218.84,1704.47;3315.53,463.901"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2977.NEF": {
+                    "Points": "1219.45,1706.1;3316.83,466.489"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2978.NEF": {
+                    "Points": "1220.47,1707.32;3317.84,467.968"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2979.NEF": {
+                    "Points": "1220.27,1707.52;3317.75,468.985"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2982.NEF": {
+                    "Points": "1222.9,1721.74;3321.82,485.349"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2987.NEF": {
+                    "Points": "1224.94,1731.49;3324.78,496.535"
+                },
+                "{f125d986-463e-4c0e-a13d-de3f1f047eb7}/GGZ_2988.NEF": {
+                    "Points": "1225.75,1740.02;3325.98,504.485"
+                }
+            },
+            "uuid": "{58bb917a-fa23-465e-a8e0-a4fff887c640}",
+            "x": 1376.6745562130177,
+            "y": -517
+        },
+        {
+            "classIdentifier": "Debayer",
+            "enabled": true,
+            "name": "Dématriçage",
+            "outputsEnabled": [
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "HQ Linear",
+                    "name": "quality",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{19dac06e-9295-46cb-995b-7a6437141fcc}",
+            "x": 951,
+            "y": -460
+        },
+        {
+            "classIdentifier": "Raw photos",
+            "enabled": true,
+            "name": "Lights",
+            "outputsEnabled": [
+                true
+            ],
+            "parameters": [
+                {
+                    "files": [
+                        "lights/GGZ_2925.NEF",
+                        "lights/GGZ_2927.NEF",
+                        "lights/GGZ_2929.NEF",
+                        "lights/GGZ_2930.NEF",
+                        "lights/GGZ_2933.NEF",
+                        "lights/GGZ_2934.NEF",
+                        "lights/GGZ_2935.NEF",
+                        "lights/GGZ_2940.NEF",
+                        "lights/GGZ_2941.NEF",
+                        "lights/GGZ_2942.NEF",
+                        "lights/GGZ_2943.NEF",
+                        "lights/GGZ_2944.NEF",
+                        "lights/GGZ_2946.NEF",
+                        "lights/GGZ_2947.NEF",
+                        "lights/GGZ_2949.NEF",
+                        "lights/GGZ_2950.NEF",
+                        "lights/GGZ_2951.NEF",
+                        "lights/GGZ_2952.NEF",
+                        "lights/GGZ_2953.NEF",
+                        "lights/GGZ_2955.NEF",
+                        "lights/GGZ_2956.NEF",
+                        "lights/GGZ_2959.NEF",
+                        "lights/GGZ_2960.NEF",
+                        "lights/GGZ_2961.NEF",
+                        "lights/GGZ_2964.NEF",
+                        "lights/GGZ_2965.NEF",
+                        "lights/GGZ_2967.NEF",
+                        "lights/GGZ_2968.NEF",
+                        "lights/GGZ_2969.NEF",
+                        "lights/GGZ_2970.NEF",
+                        "lights/GGZ_2971.NEF",
+                        "lights/GGZ_2974.NEF",
+                        "lights/GGZ_2976.NEF",
+                        "lights/GGZ_2977.NEF",
+                        "lights/GGZ_2978.NEF",
+                        "lights/GGZ_2979.NEF",
+                        "lights/GGZ_2982.NEF",
+                        "lights/GGZ_2987.NEF",
+                        "lights/GGZ_2988.NEF"
+                    ],
+                    "name": "rawCollection",
+                    "type": "filesCollection"
+                },
+                {
+                    "currentValue": "Linear",
+                    "name": "colorSpace",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "None",
+                    "name": "debayer",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Daylight",
+                    "name": "whiteBalance",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Auto",
+                    "name": "clip",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{f125d986-463e-4c0e-a13d-de3f1f047eb7}",
+            "x": -747.810650887574,
+            "y": -481.1775147928994
+        },
+        {
+            "classIdentifier": "Raw photos",
+            "enabled": true,
+            "name": "Darks",
+            "outputsEnabled": [
+                true
+            ],
+            "parameters": [
+                {
+                    "files": [
+                        "darks/GGZ_3012.NEF",
+                        "darks/GGZ_3013.NEF",
+                        "darks/GGZ_3014.NEF",
+                        "darks/GGZ_3015.NEF",
+                        "darks/GGZ_3016.NEF",
+                        "darks/GGZ_3017.NEF",
+                        "darks/GGZ_3018.NEF",
+                        "darks/GGZ_3019.NEF",
+                        "darks/GGZ_3021.NEF",
+                        "darks/GGZ_3022.NEF",
+                        "darks/GGZ_3025.NEF",
+                        "darks/GGZ_3026.NEF",
+                        "darks/GGZ_3028.NEF",
+                        "darks/GGZ_3031.NEF",
+                        "darks/GGZ_3032.NEF"
+                    ],
+                    "name": "rawCollection",
+                    "type": "filesCollection"
+                },
+                {
+                    "currentValue": "Linear",
+                    "name": "colorSpace",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "None",
+                    "name": "debayer",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Daylight",
+                    "name": "whiteBalance",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Auto",
+                    "name": "clip",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{73267967-7c19-4a41-b74b-a4a5e8025e1b}",
+            "x": -577.7776863415702,
+            "y": -258.45819924670906
+        },
+        {
+            "classIdentifier": "Integration",
+            "enabled": true,
+            "name": "Intégration",
+            "outputsEnabled": [
+                true,
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "None",
+                    "name": "rejectionType",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 16,
+                    "min": 0.0625,
+                    "name": "upper",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 3
+                },
+                {
+                    "max": 16,
+                    "min": 0.0625,
+                    "name": "lower",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 3
+                },
+                {
+                    "currentValue": "None",
+                    "name": "normalizationType",
+                    "type": "dropdown"
+                },
+                {
+                    "max": 16,
+                    "min": 1,
+                    "name": "normalizationValue",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "EV",
+                    "value": 1
+                },
+                {
+                    "max": 4,
+                    "min": 0.25,
+                    "name": "scale",
+                    "scale": "Logarithmic",
+                    "type": "slider",
+                    "unit": "",
+                    "value": 1
+                },
+                {
+                    "currentValue": "Yes",
+                    "name": "outputHDR",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{58fddf39-3b6f-417e-ac1a-4f88cc5582bb}",
+            "x": -71.95686983517906,
+            "y": -307.0717584826827
+        },
+        {
+            "classIdentifier": "Blend",
+            "enabled": true,
+            "name": "Arithmétique",
+            "outputsEnabled": [
+                true,
+                true,
+                true
+            ],
+            "parameters": [
+                {
+                    "currentValue": "Subtract",
+                    "name": "mode1",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Multiply",
+                    "name": "mode2",
+                    "type": "dropdown"
+                },
+                {
+                    "currentValue": "Yes",
+                    "name": "outputHDR",
+                    "type": "dropdown"
+                }
+            ],
+            "tags": {
+            },
+            "uuid": "{ddd2968f-f0fe-4548-9f8e-7ff7a6b968cb}",
+            "x": 212.52377835041258,
+            "y": -418.3538943905759
+        }
+    ],
+    "notes": "",
+    "projectName": "NGC7635 - preprocessing - b"
+}
